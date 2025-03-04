@@ -33,6 +33,13 @@ const Header = () => {
     window.addEventListener("scroll", handleStickyMenu);
   });
 
+  const handleHomeClick = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+  ) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <header
       className={`fixed left-0 top-0 z-99999 w-full py-7 ${
@@ -40,10 +47,11 @@ const Header = () => {
           ? "bg-white !py-4 shadow transition duration-100 dark:bg-black"
           : ""
       }`}
+      style={{ scrollBehavior: "smooth" }}
     >
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
         <div className="flex w-full items-center justify-between xl:w-1/4">
-          <a href="/">
+          <a href="/" onClick={handleHomeClick}>
             <Image
               src="/images/logo/logo-dark.svg"
               alt="logo"
@@ -147,6 +155,9 @@ const Header = () => {
                         pathUrl === menuItem.path
                           ? "text-primary hover:text-primary"
                           : "hover:text-primary"
+                      }
+                      onClick={
+                        menuItem.path === "/" ? handleHomeClick : undefined
                       }
                     >
                       {menuItem.title}
