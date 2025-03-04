@@ -56,13 +56,13 @@ const CTA = () => {
               className="animate_right lg:w-[45%]"
             >
               <div className="flex items-center justify-end xl:justify-between">
-                <Image
+                {/* <Image
                   width={299}
                   height={299}
                   src="/images/shape/shape-06.png"
                   alt="Saly"
                   className="hidden xl:block"
-                />
+                /> */}
                 <a
                   href="/auth/signup"
                   className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black"

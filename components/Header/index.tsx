@@ -3,14 +3,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import "@/i18n";
+import { useTranslation } from "react-i18next";
 
 import ThemeToggler from "./ThemeToggler";
-import menuData from "./menuData";
+import LanguageToggle from "./LanguageToggle";
+import useMenuData from "./menuData";
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [dropdownToggler, setDropdownToggler] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
+
+  const { t } = useTranslation();
+  const menuData = useMenuData();
 
   const pathUrl = usePathname();
 
@@ -153,27 +159,26 @@ const Header = () => {
 
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
             <ThemeToggler />
+            <LanguageToggle />
 
-            <Link
+            {/* <Link
               href="https://github.com/NextJSTemplates/solid-nextjs"
               className="text-regular font-medium text-waterloo hover:text-primary"
             >
-              GitHub Repo 🌟
+              {t("header.githubRepo")}
             </Link>
 
             <Link
               href="https://nextjstemplates.com/templates/solid"
               className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
             >
-              Get Pro 🔥
-            </Link>
+              {t("header.getPro")}
+            </Link> */}
           </div>
         </div>
       </div>
     </header>
   );
 };
-
-// w-full delay-300
 
 export default Header;
