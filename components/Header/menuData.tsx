@@ -21,50 +21,13 @@ const useMenuData = (): Menu[] => {
       id: 2.1,
       title: t("menu.blog"),
       newTab: false,
-      path: "/blog",
-    },
-    {
-      id: 2.3,
-      title: t("menu.docs"),
-      newTab: false,
-      path: "/docs",
-    },
-    {
-      id: 3,
-      title: t("menu.pages"),
-      newTab: false,
-      submenu: [
-        {
-          id: 31,
-          title: t("menu.blogGrid"),
-          newTab: false,
-          path: "/blog",
-        },
-        {
-          id: 35,
-          title: t("menu.docs"),
-          newTab: false,
-          path: "/docs",
-        },
-        {
-          id: 35.1,
-          title: t("menu.support"),
-          newTab: false,
-          path: "/support",
-        },
-        {
-          id: 36,
-          title: t("menu.error"),
-          newTab: false,
-          path: "/error",
-        },
-      ],
+      path: "/#blog",
     },
     {
       id: 4,
       title: t("menu.support"),
       newTab: false,
-      path: "/support",
+      path: "/#support",
     },
   ];
 };
