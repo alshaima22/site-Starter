@@ -1,0 +1,16 @@
+{
+  "menu": {
+    "home": "Home",
+    "features": "Features",
+    "blog": "Blog",
+    "docs": "Docs",
+    "pages": "Pages",
+    "blogGrid": "Blog Grid",
+    "support": "Support",
+    "error": "404"
+  },
+  "header": {
+    "githubRepo": "GitHub Repo 🌟",
+    "getPro": "Get Pro 🔥"
+  }
+}
