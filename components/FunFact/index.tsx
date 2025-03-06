@@ -9,7 +9,6 @@ const FunFact = () => {
       {/* <!-- ===== Funfact Start ===== --> */}
       <section className="px-4 py-20 md:px-8 lg:py-22.5 2xl:px-0">
         <div className="relative z-1 mx-auto max-w-c-1390 rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] py-22.5 dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:stroke-strokedark xl:py-27.5">
-
           <Image
             fill
             src="/images/shape/shape-dotted-light-02.svg"
@@ -41,17 +40,17 @@ const FunFact = () => {
             viewport={{ once: true }}
             className="animate_top mx-auto mb-12.5 px-4 text-center md:w-4/5 md:px-0 lg:mb-17.5 lg:w-2/3 xl:w-1/2"
           >
-            <h2 className="mb-4 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-              Trusted by Global Companies.
+            <h2 className="mb-4 whitespace-nowrap text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
+              Our Digital Transformation Team
             </h2>
-            <p className="mx-auto lg:w-11/12">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-              convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
-              ante in maximus.
+            <p className="mx-auto ">
+              Our digital transformation team is dedicated to helping businesses
+              navigate the complexities of the digital landscape. We provide
+              innovative solutions that drive growth and efficiency.
             </p>
           </motion.div>
 
-          <div className="flex flex-wrap justify-center gap-8 lg:gap-42.5">
+          {/* <div className="flex flex-wrap justify-center gap-8 lg:gap-42.5">
             <motion.div
               variants={{
                 hidden: {
@@ -121,7 +120,7 @@ const FunFact = () => {
               </h3>
               <p className="text-lg lg:text-para2">Winning Award</p>
             </motion.div>
-          </div>
+          </div> */}
         </div>
       </section>
       {/* <!-- ===== Funfact End ===== --> */}

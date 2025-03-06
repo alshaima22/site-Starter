@@ -13,7 +13,7 @@ const useMenuData = (): Menu[] => {
     },
     {
       id: 2,
-      title: t("menu.features"),
+      title: t("menu.services"),
       newTab: false,
       path: "/#features",
     },
