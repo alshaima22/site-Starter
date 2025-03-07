@@ -296,7 +296,7 @@ tu.dt.team2025@gmail.com                </a>
               className="animate_top"
             >
               <p>
-                &copy; {new Date().getFullYear()} Solid. All rights reserved
+                &copy; {new Date().getFullYear()} Digital Transformation Team All rights reserved
               </p>
             </motion.div>
 
