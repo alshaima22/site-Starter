@@ -17,6 +17,8 @@
     "getPro": "Get Pro 🔥"
   },
   "features": {
+    "subtitle": "Our Services",
+    "description": "We offer a wide range of digital services that are designed to help businesses succeed in the digital landscape.",
     "uiUxDesign": {
       "title": "UI/UX Design",
       "description": "Our team creates intuitive and engaging user interfaces and experiences that delight users and drive business success."
@@ -40,6 +42,103 @@
     "regularFreeUpdates": {
       "title": "Regular Free Updates",
       "description": "We offer regular free updates to ensure your applications remain up-to-date with the latest features and improvements."
+    }
+  },
+  "hero": {
+    "title": "🌐 Embrace the Future of Digital Transformation",
+    "subtitle": [
+      { "text": "Revolutionize" },
+      { "text": "Your" },
+      { "text": "Business" },
+      { "text": "with" },
+      {
+        "text": "Cutting-Edge",
+        "className": "relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark"
+      },
+      {
+        "text": "Solutions",
+        "className": "relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark"
+      }
+    ],
+    "description": "your partner in digital innovation. We deliver cutting-edge solutions and services that drive transformation, growth, and efficiency. With a forward-thinking approach, we help businesses stay ahead in a rapidly evolving digital world. Let’s redefine what’s possible together – your future starts here."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "id": 1,
+        "quest": "What is Digital Transformation?",
+        "ans": "Digital transformation is the process of using digital technologies to improve business processes, enhance customer experiences, increase operational efficiency, and create new growth opportunities."
+      },
+      {
+        "id": 2,
+        "quest": "What is the role of the Digital Transformation Team?",
+        "ans": "The Digital Transformation Team is responsible for leading and implementing digital transformation initiatives within the organization. We analyze current processes, identify digital opportunities, and design innovative solutions to achieve strategic goals."
+      },
+      {
+        "id": 3,
+        "quest": "What services does the team provide?",
+        "ans": "We offer a range of services, including: Analyzing processes and identifying digital opportunities. Designing and implementing technical solutions. Training employees on new digital tools. Supporting the adoption of modern technologies like AI, IoT, and big data. Enhancing customer experiences through digital solutions."
+      },
+      {
+        "id": 4,
+        "quest": "Who can contact the Digital Transformation Team?",
+        "ans": "Any department or employee within the organization can contact us if they have an idea or project related to digital transformation. We are here to support all teams in their digital journey."
+      },
+      {
+        "id": 5,
+        "quest": "What are the benefits of digital transformation for the organization?",
+        "ans": "Digital transformation helps: Improve operational efficiency and reduce costs. Enhance customer experiences and increase satisfaction. Enable data-driven decision-making. Increase competitiveness in the market."
+      },
+      {
+        "id": 6,
+        "quest": "How are digital transformation projects implemented?",
+        "ans": "We follow a clear methodology that includes: Analyzing the current state and defining objectives. Designing appropriate solutions. Implementing solutions in collaboration with relevant teams. Monitoring performance and making continuous improvements."
+      },
+      {
+        "id": 7,
+        "quest": "What challenges might digital transformation face?",
+        "ans": "Common challenges include: Resistance to change from employees. Lack of digital skills. High costs of certain technologies. Difficulty integrating legacy systems with new solutions."
+      },
+      {
+        "id": 8,
+        "quest": "How can other teams participate in digital transformation?",
+        "ans": "Other teams can participate by: Identifying digital opportunities in their processes. Contacting the Digital Transformation Team to share ideas and initiatives. Participating in digital transformation training to enhance skills."
+      },
+      {
+        "id": 9,
+        "quest": "What tools and technologies does the team use?",
+        "ans": "We use a variety of modern tools and technologies, such as: Digital project management systems. Data analytics and AI tools. Software and application development platforms. Cloud computing solutions."
+      },
+      {
+        "id": 10,
+        "quest": "How is the success of digital transformation measured?",
+        "ans": "Success is measured using key performance indicators (KPIs) such as: Improved operational efficiency. Increased customer satisfaction. Return on investment (ROI) from digital projects. Reduced time to complete tasks."
+      }
+    ]
+  },
+  "about": {
+    "projects": {
+      "subtitle": "Our Projects",
+      "description": "Explore our diverse range of projects that showcase our expertise and commitment to delivering high-quality solutions.",
+      "project1": {
+        "new": "New",
+        "title": "Student Housing Platform for Tripoli University",
+        "heading": "A Complete Solution for Student Housing Management",
+        "description": "We developed an integrated student housing platform for Tripoli University, leveraging modern technologies to streamline operations for staff and enhance the student experience.",
+        "features": [
+          {
+            "number": "01",
+            "title": "Student-Friendly Interface",
+            "description": "The platform features a landing page for housing information, enabling students to register and submit housing applications seamlessly."
+          },
+          {
+            "number": "02",
+            "title": "Administrative Management System",
+            "description": "Staff can access accurate statistics, manage student processes electronically, and generate detailed reports on students, buildings, rooms, and personnel."
+          }
+        ]
+      }
     }
   }
 }

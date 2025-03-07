@@ -6,7 +6,7 @@ import SectionHeader from "../Common/SectionHeader";
 import { useTranslation } from "react-i18next";
 
 const Feature = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("translation");
 
   const translatedFeaturesData = featuresData.map((feature) => ({
     ...feature,
@@ -22,8 +22,8 @@ const Feature = () => {
           {/* <!-- Section Title Start --> */}
           <SectionHeader
             headerInfo={{
-              subtitle: "Our Services",
-              description: `We offer a wide range of digital services that are designed to help businesses succeed in the digital landscape.`,
+              subtitle: t("features.subtitle"),
+              description: t("features.description"),
             }}
           />
           {/* <!-- Section Title End --> */}

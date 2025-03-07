@@ -2,8 +2,10 @@
 import Image from "next/image";
 import { useState } from "react";
 import { TypewriterEffect } from "../ui/typewriter-effect";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation();
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
@@ -17,35 +19,16 @@ const Hero = () => {
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
             <div className="md:w-1/2">
               <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
-                🌐 Embrace the Future of Digital Transformation
+                {t("hero.title")}
               </h4>
-              <h1 className="mb-5 pr-9 text-4xl md:text-5xl lg:text-6xl font-bold text-black dark:text-white xl:text-hero">
+              <h1 className="mb-5 pr-9 text-4xl font-bold text-black dark:text-white md:text-5xl lg:text-6xl xl:text-hero">
                 <TypewriterEffect
-                  words={[
-                    { text: "Revolutionize" },
-                    { text: "Your" },
-                    { text: "Business" },
-                    { text: "with" },
-                    {
-                      text: "Cutting-Edge",
-                      className:
-                        "relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark",
-                    },
-                    {
-                      text: "Solutions",
-                      className:
-                        "relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark",
-                    },
-                  ]}
+                  words={t("hero.subtitle", { returnObjects: true })}
                   className="text-left"
                 />
               </h1>
               <p className="text-base md:text-lg lg:text-xl">
-                your partner in digital innovation. We deliver cutting-edge
-                solutions and services that drive transformation, growth, and
-                efficiency. With a forward-thinking approach, we help businesses
-                stay ahead in a rapidly evolving digital world. Let’s redefine
-                what’s possible together – your future starts here.
+                {t("hero.description")}
               </p>
 
               <div className="mt-10">

@@ -3,14 +3,17 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import FAQItem from "./FAQItem";
-import faqData from "./faqData";
+import { useTranslation } from "react-i18next";
 
 const FAQ = () => {
+  const { t } = useTranslation("translation");
   const [activeFaq, setActiveFaq] = useState(0);
 
   const handleFaqToggle = (id: number) => {
     activeFaq === id ? setActiveFaq(0) : setActiveFaq(id);
   };
+
+  const faqData = t("faq.items", { returnObjects: true });
 
   return (
     <>
@@ -38,7 +41,6 @@ const FAQ = () => {
                   opacity: 0,
                   x: -20,
                 },
-
                 visible: {
                   opacity: 1,
                   x: 0,
@@ -51,19 +53,13 @@ const FAQ = () => {
               className="animate_left md:w-2/5 lg:w-1/2"
             >
               <span className="font-medium uppercase text-black dark:text-white">
-                OUR FAQS
+                {t("faq.title")}
               </span>
               <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                Frequently Asked
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titlebgdark">
-                  Questions
+                  {t("faq.title")}
                 </span>
               </h2>
-
-              <a
-                href="#"
-                className="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-primary dark:text-white dark:hover:text-primary"
-              ></a>
             </motion.div>
 
             <motion.div
@@ -72,7 +68,6 @@ const FAQ = () => {
                   opacity: 0,
                   x: 20,
                 },
-
                 visible: {
                   opacity: 1,
                   x: 0,
@@ -82,10 +77,10 @@ const FAQ = () => {
               whileInView="visible"
               transition={{ duration: 1, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_right w-full md:w-4/5 lg:w-11/12" // Added w-full class
+              className="animate_right w-full md:w-4/5 lg:w-11/12"
             >
               <div className="rounded-lg bg-white shadow-solid-8 dark:border dark:border-strokedark dark:bg-blacksection">
-                {faqData.map((faq, key) => (
+                {faqData.map((faq: any, key: number) => (
                   <FAQItem
                     key={key}
                     faqData={{ ...faq, activeFaq, handleFaqToggle }}
