@@ -3,8 +3,17 @@ import React from "react";
 import featuresData from "./featuresData";
 import SingleFeature from "./SingleFeature";
 import SectionHeader from "../Common/SectionHeader";
+import { useTranslation } from "react-i18next";
 
 const Feature = () => {
+  const { t } = useTranslation();
+
+  const translatedFeaturesData = featuresData.map((feature) => ({
+    ...feature,
+    title: t(feature.title),
+    description: t(feature.description),
+  }));
+
   return (
     <>
       {/* <!-- ===== Features Start ===== --> */}
@@ -22,7 +31,7 @@ const Feature = () => {
           <div className="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 xl:mt-20 xl:gap-12.5">
             {/* <!-- Features item Start --> */}
 
-            {featuresData.map((feature, key) => (
+            {translatedFeaturesData.map((feature, key) => (
               <SingleFeature feature={feature} key={key} />
             ))}
             {/* <!-- Features item End --> */}

@@ -4,44 +4,38 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: "/images/icon/icon-03.svg",
-    title: "UI/UX Design",
-    description:
-      "Our team creates intuitive and engaging user interfaces and experiences that delight users and drive business success.",
+    title: "features.uiUxDesign.title",
+    description: "features.uiUxDesign.description",
   },
   {
     id: 2,
     icon: "/images/icon/icon-05.svg",
-    title: "Front End Development",
-    description:
-      "We build responsive and high-performance front-end applications using the latest web technologies and frameworks.",
+    title: "features.frontEndDevelopment.title",
+    description: "features.frontEndDevelopment.description",
   },
   {
     id: 3,
     icon: "/images/icon/icon-02.svg",
-    title: "Back End Development",
-    description:
-      "Our back-end development services ensure your applications are robust, scalable, and secure, with seamless integration of APIs and databases.",
+    title: "features.backEndDevelopment.title",
+    description: "features.backEndDevelopment.description",
   },
   {
     id: 4,
     icon: "/images/icon/icon-04.svg",
-    title: "Cyber Security",
-    description:
-      "We provide comprehensive cyber security solutions to protect your digital assets from threats and vulnerabilities.",
+    title: "features.cyberSecurity.title",
+    description: "features.cyberSecurity.description",
   },
   {
     id: 5,
     icon: "/images/icon/icon-01.svg",
-    title: "Data Analysis",
-    description:
-      "Our data analysis services help you make informed decisions by transforming raw data into actionable insights.",
+    title: "features.dataAnalysis.title",
+    description: "features.dataAnalysis.description",
   },
   {
     id: 6,
     icon: "/images/icon/icon-06.svg",
-    title: "Regular Free Updates",
-    description:
-      "We offer regular free updates to ensure your applications remain up-to-date with the latest features and improvements.",
+    title: "features.regularFreeUpdates.title",
+    description: "features.regularFreeUpdates.description",
   },
 ];
 

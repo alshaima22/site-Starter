@@ -10,11 +10,36 @@
     "faq": "FAQ",
     "projects": "Projects",
     "aboutUs": "About Us",
-
     "error": "404"
   },
   "header": {
     "githubRepo": "GitHub Repo 🌟",
     "getPro": "Get Pro 🔥"
+  },
+  "features": {
+    "uiUxDesign": {
+      "title": "UI/UX Design",
+      "description": "Our team creates intuitive and engaging user interfaces and experiences that delight users and drive business success."
+    },
+    "frontEndDevelopment": {
+      "title": "Front End Development",
+      "description": "We build responsive and high-performance front-end applications using the latest web technologies and frameworks."
+    },
+    "backEndDevelopment": {
+      "title": "Back End Development",
+      "description": "Our back-end development services ensure your applications are robust, scalable, and secure, with seamless integration of APIs and databases."
+    },
+    "cyberSecurity": {
+      "title": "Cyber Security",
+      "description": "We provide comprehensive cyber security solutions to protect your digital assets from threats and vulnerabilities."
+    },
+    "dataAnalysis": {
+      "title": "Data Analysis",
+      "description": "Our data analysis services help you make informed decisions by transforming raw data into actionable insights."
+    },
+    "regularFreeUpdates": {
+      "title": "Regular Free Updates",
+      "description": "We offer regular free updates to ensure your applications remain up-to-date with the latest features and improvements."
+    }
   }
 }
