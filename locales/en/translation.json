@@ -140,5 +140,21 @@
         ]
       }
     }
+  },
+  "contact": {
+    "sendMessage": "Send a message",
+    "findUs": "Find us",
+    "ourLocation": "Our Location",
+    "location": "University of Tripoli, Tripoli, Libya",
+    "emailAddress": "Email Address",
+    "email": "tu.dt.team2025@gmail.com",
+    "phoneNumber": "Phone Number",
+    "phone": "+218 93 010 0028",
+    "fullName": "Full name",
+    "emailPlaceholder": "Email address",
+    "subject": "Subject",
+    "phonePlaceholder": "Phone number",
+    "message": "Message",
+    "sendMessageButton": "Send Message"
   }
 }

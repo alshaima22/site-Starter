@@ -139,5 +139,21 @@
         ]
       }
     }
+  },
+  "contact": {
+    "sendMessage": "إرسال رسالة",
+    "findUs": "اعثر علينا",
+    "ourLocation": "موقعنا",
+    "location": "جامعة طرابلس، طرابلس، ليبيا",
+    "emailAddress": "عنوان البريد الإلكتروني",
+    "email": "tu.dt.team2025@gmail.com",
+    "phoneNumber": "رقم الهاتف",
+    "phone": "+218 93 010 0028",
+    "fullName": "الاسم الكامل",
+    "emailPlaceholder": "عنوان البريد الإلكتروني",
+    "subject": "الموضوع",
+    "phonePlaceholder": "رقم الهاتف",
+    "message": "رسالة",
+    "sendMessageButton": "إرسال رسالة"
   }
 }

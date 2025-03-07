@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   /**
@@ -9,9 +10,12 @@ const Contact = () => {
    * Reason: To fix rehydration error
    */
   const [hasMounted, setHasMounted] = React.useState(false);
+  const { t } = useTranslation("translation");
+
   React.useEffect(() => {
     setHasMounted(true);
   }, []);
+
   if (!hasMounted) {
     return null;
   }
@@ -57,7 +61,7 @@ const Contact = () => {
               className="animate_top w-full rounded-lg bg-white p-7.5 shadow-solid-8 dark:border dark:border-strokedark dark:bg-black md:w-3/5 lg:w-3/4 xl:p-15"
             >
               <h2 className="mb-15 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2">
-                Send a message
+                {t("contact.sendMessage")}
               </h2>
 
               <form
@@ -67,13 +71,13 @@ const Contact = () => {
                 <div className="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
                     type="text"
-                    placeholder="Full name"
+                    placeholder={t("contact.fullName")}
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
 
                   <input
                     type="email"
-                    placeholder="Email address"
+                    placeholder={t("contact.emailPlaceholder")}
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
                 </div>
@@ -81,20 +85,20 @@ const Contact = () => {
                 <div className="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
                     type="text"
-                    placeholder="Subject"
+                    placeholder={t("contact.subject")}
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
 
                   <input
                     type="text"
-                    placeholder="Phone number"
+                    placeholder={t("contact.phonePlaceholder")}
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
                 </div>
 
                 <div className="mb-11.5 flex">
                   <textarea
-                    placeholder="Message"
+                    placeholder={t("contact.message")}
                     rows={4}
                     className="w-full border-b border-stroke bg-transparent focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
                   ></textarea>
@@ -107,14 +111,13 @@ const Contact = () => {
                       type="checkbox"
                       className="peer sr-only"
                     />
-                   
                   </div>
 
                   <button
                     aria-label="send message"
                     className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark"
                   >
-                    Send Message
+                    {t("contact.sendMessageButton")}
                     <svg
                       className="fill-white"
                       width="14"
@@ -152,29 +155,31 @@ const Contact = () => {
               className="animate_top w-full md:w-2/5 md:p-7.5 lg:w-[26%] xl:pt-15"
             >
               <h2 className="mb-12.5 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2">
-                Find us
+                {t("contact.findUs")}
               </h2>
 
               <div className="5 mb-7">
                 <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                  Our Loaction
+                  {t("contact.ourLocation")}
                 </h3>
-                <p>University of Tripoli, Tripoli, Libya</p>
-</div>
+                <p>{t("contact.location")}</p>
+              </div>
               <div className="5 mb-7">
                 <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                  Email Address
+                  {t("contact.emailAddress")}
                 </h3>
                 <p>
-                  <a href="#">tu.dt.team2025@gmail.com    </a>
+                  <a href={`mailto:${t("contact.email")}`}>
+                    {t("contact.email")}
+                  </a>
                 </p>
               </div>
               <div>
                 <h4 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                  Phone Number
+                  {t("contact.phoneNumber")}
                 </h4>
                 <p>
-                  <a href="#">+218 93 010 0028</a>
+                  <a href={`tel:${t("contact.phone")}`}>{t("contact.phone")}</a>
                 </p>
               </div>
             </motion.div>
