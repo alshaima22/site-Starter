@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { TypewriterEffect } from "../ui/typewriter-effect";
 
 const Hero = () => {
   const [email, setEmail] = useState("");
@@ -14,28 +15,45 @@ const Hero = () => {
       <section className="overflow-hidden pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46">
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
-            <div className=" md:w-1/2">
-            <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
-            🌐 Embrace the Future of Digital Transformation
-          </h4>
-          <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero">
-            Revolutionize Your Business with {"   "}
-            <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark">
-              Cutting-Edge Solutions
-            </span>
-          </h1>
-       <p>
-        your partner in digital innovation. We deliver cutting-edge solutions and services that drive transformation, growth, and efficiency. With a forward-thinking approach, we help businesses stay ahead in a rapidly evolving digital world. Let’s redefine what’s possible together – your future starts here.          
-        </p>
+            <div className="md:w-1/2">
+              <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
+                🌐 Embrace the Future of Digital Transformation
+              </h4>
+              <h1 className="mb-5 pr-9 text-4xl md:text-5xl lg:text-6xl font-bold text-black dark:text-white xl:text-hero">
+                <TypewriterEffect
+                  words={[
+                    { text: "Revolutionize" },
+                    { text: "Your" },
+                    { text: "Business" },
+                    { text: "with" },
+                    {
+                      text: "Cutting-Edge",
+                      className:
+                        "relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark",
+                    },
+                    {
+                      text: "Solutions",
+                      className:
+                        "relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark",
+                    },
+                  ]}
+                  className="text-left"
+                />
+              </h1>
+              <p className="text-base md:text-lg lg:text-xl">
+                your partner in digital innovation. We deliver cutting-edge
+                solutions and services that drive transformation, growth, and
+                efficiency. With a forward-thinking approach, we help businesses
+                stay ahead in a rapidly evolving digital world. Let’s redefine
+                what’s possible together – your future starts here.
+              </p>
 
               <div className="mt-10">
                 <form onSubmit={handleSubmit}>
                   <div className="flex flex-wrap gap-5">
-
-
+                    {/* Form content */}
                   </div>
                 </form>
-
               </div>
             </div>
 
@@ -62,7 +80,7 @@ const Hero = () => {
                   height={21.66}
                   className="absolute -right-6.5 bottom-0 z-1"
                 />
-                <div className=" relative aspect-[640/444] w-full">
+                <div className="relative aspect-[640/444] w-full">
                   <Image
                     className="shadow-solid-l dark:hidden"
                     src="/images/hero/logoo.png"
