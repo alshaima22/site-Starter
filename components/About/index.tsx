@@ -2,21 +2,31 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import SectionHeader from "../Common/SectionHeader";
 
 const About = () => {
   return (
     <>
       {/* <!-- ===== About Start ===== --> */}
-      <section className="overflow-hidden pb-20 lg:pb-25 xl:pb-30">
+      <section
+        id="projects"
+        className="overflow-hidden pb-20 lg:pb-25 xl:pb-30"
+      >
         <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
-          <div className="flex items-center gap-8 lg:gap-32.5">
+          <SectionHeader
+            headerInfo={{
+              subtitle: "Our Projects",
+              description:
+                "Explore our diverse range of projects that showcase our expertise and commitment to delivering high-quality solutions.",
+            }}
+          />
+          <div className="mt-10 flex flex-col items-center gap-8 md:flex-row lg:gap-32.5">
             <motion.div
               variants={{
                 hidden: {
                   opacity: 0,
                   x: -20,
                 },
-
                 visible: {
                   opacity: 1,
                   x: 0,
@@ -26,16 +36,17 @@ const About = () => {
               whileInView="visible"
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_left relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
+              className="animate_left relative order-1 mx-auto aspect-[588/526.5] w-full md:order-none md:w-1/2"
             >
+              <div className="absolute inset-0 rounded-md bg-gradient-to-b from-orange-100 to-transparent"></div>
               <Image
-                src="/images/about/about-light-01.png"
+                src="/images/about/Frame.png"
                 alt="About"
                 className="dark:hidden"
                 fill
               />
               <Image
-                src="/images/about/about-dark-01.png"
+                src="/images/about/Frame.png"
                 alt="About"
                 className="hidden dark:block"
                 fill
@@ -47,7 +58,6 @@ const About = () => {
                   opacity: 0,
                   x: 20,
                 },
-
                 visible: {
                   opacity: 1,
                   x: 0,
@@ -57,7 +67,7 @@ const About = () => {
               whileInView="visible"
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_right md:w-1/2"
+              className="animate_right order-2 md:order-none md:w-1/2"
             >
               <span className="font-medium uppercase text-black dark:text-white">
                 <span className="mb-4 mr-4 inline-flex rounded-full bg-meta px-4.5 py-1 text-metatitle uppercase text-white ">
@@ -109,7 +119,7 @@ const About = () => {
       {/* <!-- ===== About End ===== --> */}
 
       {/* <!-- ===== About Two Start ===== --> */}
-      <section>
+      {/* <section>
         <div className="mx-auto max-w-c-1235 overflow-hidden px-4 md:px-8 2xl:px-0">
           <div className="flex items-center gap-8 lg:gap-32.5">
             <motion.div
@@ -118,7 +128,6 @@ const About = () => {
                   opacity: 0,
                   x: -20,
                 },
-
                 visible: {
                   opacity: 1,
                   x: 0,
@@ -168,7 +177,6 @@ const About = () => {
                   opacity: 0,
                   x: 20,
                 },
-
                 visible: {
                   opacity: 1,
                   x: 0,
@@ -195,7 +203,7 @@ const About = () => {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* <!-- ===== About Two End ===== --> */}
     </>
   );

@@ -40,6 +40,36 @@ const Header = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const handleAboutUsClick = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+  ) => {
+    e.preventDefault();
+    const aboutUsSection = document.getElementById("about-us");
+    if (aboutUsSection) {
+      aboutUsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleFaqClick = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+  ) => {
+    e.preventDefault();
+    const faqSection = document.getElementById("faq");
+    if (faqSection) {
+      faqSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleProjectsClick = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+  ) => {
+    e.preventDefault();
+    const projectsSection = document.getElementById("projects");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header
       className={`fixed left-0 top-0 z-99999 w-full py-7 ${
@@ -157,7 +187,15 @@ const Header = () => {
                           : "hover:text-primary"
                       }
                       onClick={
-                        menuItem.path === "/" ? handleHomeClick : undefined
+                        menuItem.path === "/"
+                          ? handleHomeClick
+                          : menuItem.path === "/#about-us"
+                          ? handleAboutUsClick
+                          : menuItem.path === "/#faq"
+                          ? handleFaqClick
+                          : menuItem.path === "/#projects"
+                          ? handleProjectsClick
+                          : undefined
                       }
                     >
                       {menuItem.title}

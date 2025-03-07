@@ -30,34 +30,29 @@ const Footer = () => {
               >
                 <a href="/" className="relative">
                   <Image
-                    width={110}
-                    height={80}
-                    src="/images/logo/logo-light.svg"
+                    width={130}
+                    height={100}
+                    src="/images/hero/logoo.png"
                     alt="Logo"
                     className="dark:hidden"
                   />
                   <Image
-                    width={110}
-                    height={80}
-                    src="/images/logo/logo-dark.svg"
+                    width={130}
+                    height={100}
+                    src="/images/hero/logoo.png"
                     alt="Logo"
                     className="hidden dark:block"
                   />
                 </a>
 
-                <p className="mb-10 mt-5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-
-                <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
+                <p className="mb-1.5 mt-10 text-sectiontitle uppercase tracking-[5px]">
                   contact
                 </p>
                 <a
                   href="#"
                   className="text-itemtitle font-medium text-black dark:text-white"
                 >
-                  hello@solid.com
-                </a>
+tu.dt.team2025@gmail.com                </a>
               </motion.div>
 
               <div className="flex w-full flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12">

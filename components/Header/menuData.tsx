@@ -12,17 +12,29 @@ const useMenuData = (): Menu[] => {
       path: "/",
     },
     {
+      id: 3,
+      title: t("menu.aboutUs"),
+      newTab: false,
+      path: "/#about-us",
+    },
+    {
       id: 2,
       title: t("menu.services"),
       newTab: false,
       path: "/#features",
+    },    {
+      id: 6,
+      title: t("menu.projects"),
+      newTab: false,
+      path: "/#projects",
     },
     {
-      id: 2.1,
-      title: t("menu.blog"),
+      id: 5,
+      title: t("menu.faq"),
       newTab: false,
-      path: "/#blog",
+      path: "/#faq",
     },
+
     {
       id: 4,
       title: t("menu.support"),
