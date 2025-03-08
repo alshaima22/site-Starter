@@ -16,6 +16,10 @@
     "githubRepo": "GitHub Repo 🌟",
     "getPro": "Get Pro 🔥"
   },
+  "funFact": {
+    "title": "Our Digital Transformation Team",
+    "description": "Our digital transformation team is dedicated to helping businesses navigate the complexities of the digital landscape. We provide innovative solutions that drive growth and efficiency."
+  },
   "features": {
     "subtitle": "Our Services",
     "description": "We offer a wide range of digital services that are designed to help businesses succeed in the digital landscape.",
@@ -44,6 +48,8 @@
       "description": "We offer regular free updates to ensure your applications remain up-to-date with the latest features and improvements."
     }
   },
+  
+  
   "hero": {
     "title": "🌐 Embrace the Future of Digital Transformation",
     "subtitle": [

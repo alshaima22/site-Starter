@@ -2,8 +2,11 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const FunFact = () => {
+  const { t } = useTranslation("translation");
+
   return (
     <>
       {/* <!-- ===== Funfact Start ===== --> */}
@@ -41,13 +44,9 @@ const FunFact = () => {
             className="animate_top mx-auto mb-12.5 px-4 text-center md:w-4/5 md:px-0 lg:mb-17.5 lg:w-2/3 xl:w-1/2"
           >
             <h2 className="mb-4 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-              Our Digital Transformation Team
+              {t("funFact.title")}
             </h2>
-            <p className="mx-auto ">
-              Our digital transformation team is dedicated to helping businesses
-              navigate the complexities of the digital landscape. We provide
-              innovative solutions that drive growth and efficiency.
-            </p>
+            <p className="mx-auto ">{t("funFact.description")}</p>
           </motion.div>
 
           {/* <div className="flex flex-wrap justify-center gap-8 lg:gap-42.5">
