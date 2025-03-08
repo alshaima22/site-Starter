@@ -52,15 +52,15 @@
   "hero": {
     "title": "🌐 احتضان مستقبل التحول الرقمي",
     "subtitle": [
-      { "text": "ثورة" },
+      { "text": "طور" },
       { "text": "عملك" },
-      { "text": "مع" },
+      { "text": "باستخدام" },
       {
-        "text": "الحلول",
+        "text": "حلول",
         "className": "relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark"
       },
       {
-        "text": "المتطورة",
+        "text": "مبتكرة",
         "className": "relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark"
       }
     ],
@@ -153,12 +153,20 @@
     "emailAddress": "عنوان البريد الإلكتروني",
     "email": "tu.dt.team2025@gmail.com",
     "phoneNumber": "رقم الهاتف",
-    "phone": "+218 93 010 0028",
+    "phone": " 0028 010 93 218+    ",
     "fullName": "الاسم الكامل",
     "emailPlaceholder": "عنوان البريد الإلكتروني",
     "subject": "الموضوع",
     "phonePlaceholder": "رقم الهاتف",
     "message": "رسالة",
     "sendMessageButton": "إرسال رسالة"
-  }
+  },
+  "contacT": "اتصل",
+  "quickLinks": "روابط سريعة",
+  "support": "الدعم",
+  "contactUs": "اتصل بنا",
+  "newsletter": "النشرة الإخبارية",
+  "subscribeToReceiveUpdates": "اشترك لتلقي التحديثات المستقبلية",
+  "digitalTransformationTeam": "فريق التحول الرقمي",
+  "allRightsReserved": "جميع الحقوق محفوظة"
 }

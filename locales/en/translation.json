@@ -48,8 +48,7 @@
       "description": "We offer regular free updates to ensure your applications remain up-to-date with the latest features and improvements."
     }
   },
-  
-  
+
   "hero": {
     "title": "🌐 Embrace the Future of Digital Transformation",
     "subtitle": [
@@ -162,5 +161,13 @@
     "phonePlaceholder": "Phone number",
     "message": "Message",
     "sendMessageButton": "Send Message"
-  }
+  },
+  "contacT": "Contact",
+  "quickLinks": "Quick Links",
+  "support": "Support",
+  "contactUs": "Contact Us",
+  "newsletter": "Newsletter",
+  "subscribeToReceiveUpdates": "Subscribe to receive future updates",
+  "digitalTransformationTeam": "Digital Transformation Team",
+  "allRightsReserved": "All rights reserved"
 }
