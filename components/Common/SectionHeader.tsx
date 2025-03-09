@@ -8,7 +8,7 @@ type HeaderInfo = {
 };
 
 const SectionHeader = ({ headerInfo }: { headerInfo: HeaderInfo }) => {
-  const { title, subtitle, description } = headerInfo;
+  const { subtitle, description } = headerInfo;
 
   return (
     <>

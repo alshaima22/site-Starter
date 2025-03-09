@@ -23,9 +23,8 @@ const Hero = () => {
               </h4>
               <h1 className="mb-5 pr-9 text-4xl font-bold text-black dark:text-white md:text-5xl lg:text-6xl xl:text-hero">
                 <TypewriterEffect
-                  words={t("hero.subtitle", { returnObjects: true })}
-                  className="text-left"
-                />
+                  words={t("hero.subtitle", { returnObjects: true }) as { text: string; className?: string }[]}
+                  />
               </h1>
               <p className="text-base md:text-lg lg:text-xl">
                 {t("hero.description")}

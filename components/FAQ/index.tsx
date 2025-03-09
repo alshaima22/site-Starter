@@ -13,7 +13,7 @@ const FAQ = () => {
     activeFaq === id ? setActiveFaq(0) : setActiveFaq(id);
   };
 
-  const faqData = t("faq.items", { returnObjects: true });
+  const faqData = t("faq.items", { returnObjects: true }) as Array<{ question: string; answer: string }>;
 
   return (
     <>

@@ -84,9 +84,9 @@ const About = () => {
               </h2>
               <p>{t("about.projects.project1.description")}</p>
 
-              {t("about.projects.project1.features", {
+              {(t("about.projects.project1.features", {
                 returnObjects: true,
-              }).map((feature: any, index: number) => (
+              }) as any[]).map((feature: any, index: number) => (
                 <div key={index} className="mt-7.5 flex items-center gap-5">
                   <div className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
                     <p className="text-metatitle2 font-semibold text-black dark:text-white">
