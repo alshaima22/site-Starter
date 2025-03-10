@@ -1,25 +1,45 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
-  /**
-   * Source: https://www.joshwcomeau.com/react/the-perils-of-rehydration/
-   * Reason: To fix rehydration error
-   */
-  const [hasMounted, setHasMounted] = React.useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
   const { t } = useTranslation("translation");
 
-  React.useEffect(() => {
+  const [formData, setFormData] = useState({
+    user_name: "",
+    user_email: "",
+    subject: "",
+    phone: "",
+    message: "",
+  });
+
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+
+  useEffect(() => {
     setHasMounted(true);
   }, []);
+
+  useEffect(() => {
+    const { user_name, user_email, subject, phone, message } = formData;
+    setIsButtonDisabled(
+      !user_name || !user_email || !subject || !phone || !message,
+    );
+  }, [formData]);
 
   if (!hasMounted) {
     return null;
   }
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -34,18 +54,26 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          alert("Message sent successfully!");
         },
         (error) => {
           console.log(error.text);
+          alert("Failed to send the message. Please try again.");
         },
       );
 
     e.currentTarget.reset();
+    setFormData({
+      user_name: "",
+      user_email: "",
+      subject: "",
+      phone: "",
+      message: "",
+    });
   };
 
   return (
     <>
-      {/* <!-- ===== Contact Start ===== --> */}
       <section id="support" className="px-4 md:px-8 2xl:px-0">
         <div className="relative mx-auto max-w-c-1390 px-7.5 pt-10 lg:px-15 lg:pt-15 xl:px-20 xl:pt-20">
           <div className="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg bg-gradient-to-t from-transparent to-[#dee7ff47] dark:bg-gradient-to-t dark:to-[#252A42]"></div>
@@ -71,7 +99,6 @@ const Contact = () => {
                   opacity: 0,
                   y: -20,
                 },
-
                 visible: {
                   opacity: 1,
                   y: 0,
@@ -94,6 +121,9 @@ const Contact = () => {
                     name="user_name"
                     placeholder={t("contact.fullName")}
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    required
+                    value={formData.user_name}
+                    onChange={handleChange}
                   />
 
                   <input
@@ -101,6 +131,9 @@ const Contact = () => {
                     name="user_email"
                     placeholder={t("contact.emailPlaceholder")}
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    required
+                    value={formData.user_email}
+                    onChange={handleChange}
                   />
                 </div>
 
@@ -110,6 +143,9 @@ const Contact = () => {
                     name="subject"
                     placeholder={t("contact.subject")}
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    required
+                    value={formData.subject}
+                    onChange={handleChange}
                   />
 
                   <input
@@ -117,6 +153,9 @@ const Contact = () => {
                     name="phone"
                     placeholder={t("contact.phonePlaceholder")}
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    required
+                    value={formData.phone}
+                    onChange={handleChange}
                   />
                 </div>
 
@@ -126,6 +165,9 @@ const Contact = () => {
                     placeholder={t("contact.message")}
                     rows={4}
                     className="w-full border-b border-stroke bg-transparent focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
+                    required
+                    value={formData.message}
+                    onChange={handleChange}
                   ></textarea>
                 </div>
 
@@ -140,7 +182,12 @@ const Contact = () => {
 
                   <button
                     aria-label="send message"
-                    className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark"
+                    className={`inline-flex items-center gap-2.5 rounded-full px-6 py-3 font-medium text-white duration-300 ease-in-out ${
+                      isButtonDisabled
+                        ? "cursor-not-allowed bg-gray-400"
+                        : "bg-black hover:bg-blackho dark:bg-btndark"
+                    }`}
+                    disabled={isButtonDisabled}
                   >
                     {t("contact.sendMessageButton")}
                     <svg
@@ -167,7 +214,6 @@ const Contact = () => {
                   opacity: 0,
                   y: -20,
                 },
-
                 visible: {
                   opacity: 1,
                   y: 0,
@@ -211,7 +257,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-      {/* <!-- ===== Contact End ===== --> */}
     </>
   );
 };

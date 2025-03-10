@@ -5,12 +5,14 @@ import { TypewriterEffect } from "../ui/typewriter-effect";
 import { useTranslation } from "react-i18next";
 
 const Hero = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+
+  const textDirectionClass = i18n.language === "ar" ? "rtl" : "ltr";
 
   return (
     <>
@@ -21,10 +23,10 @@ const Hero = () => {
               <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
                 {t("hero.title")}
               </h4>
-              <h1 className="mb-5 pr-9 text-4xl font-bold text-black dark:text-white md:text-5xl lg:text-6xl xl:text-hero">
+              <h1 className={`mb-5 pr-9 text-4xl font-bold text-black dark:text-white md:text-5xl lg:text-6xl xl:text-hero ${textDirectionClass}`}>
                 <TypewriterEffect
                   words={t("hero.subtitle", { returnObjects: true }) as { text: string; className?: string }[]}
-                  />
+               className="text-justify" />
               </h1>
               <p className="text-base md:text-lg lg:text-xl">
                 {t("hero.description")}
