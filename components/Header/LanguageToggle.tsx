@@ -15,7 +15,9 @@ const LanguageToggle = () => {
       onClick={toggleLanguage}
       className="bg-gray-2 dark:bg-dark-bg flex cursor-pointer items-center justify-center rounded-full text-black dark:text-white lg:static"
     >
-      {i18n.language === "en" ? "AR" : "EN"}
+      <span style={{ color: "#666666" }}>
+        {i18n.language === "en" ? "AR" : "EN"}
+      </span>
     </button>
   );
 };
