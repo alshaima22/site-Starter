@@ -28,8 +28,8 @@ const featuresData: Feature[] = [
   {
     id: 5,
     icon: "/images/icon/icon-01.svg",
-    title: "features.dataAnalysis.title",
-    description: "features.dataAnalysis.description",
+    title: "features.systemAnalysis.title",
+    description: "features.systemAnalysis.description",
   },
   {
     id: 6,

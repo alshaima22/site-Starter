@@ -39,9 +39,9 @@
       "title": "Cyber Security",
       "description": "We provide comprehensive cyber security solutions to protect your digital assets from threats and vulnerabilities."
     },
-    "dataAnalysis": {
-      "title": "Data Analysis",
-      "description": "Our data analysis services help you make informed decisions by transforming raw data into actionable insights."
+    "systemAnalysis": {
+      "title": "System Analysis",
+      "description": "Our system analysis services help you design and optimize systems to meet your business needs effectively."
     },
     "regularFreeUpdates": {
       "title": "Regular Free Updates",
