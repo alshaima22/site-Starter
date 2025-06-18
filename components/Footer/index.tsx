@@ -210,7 +210,7 @@ const Footer = () => {
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a href="#" aria-label="social icon">
                       <svg
                         className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
@@ -233,9 +233,9 @@ const Footer = () => {
                         </defs>
                       </svg>
                     </a>
-                  </li>
+                  </li> */}
                   <li>
-                    <a href="#" aria-label="social icon">
+                    <a href="https://www.linkedin.com/company/%D8%A7%D9%84%D8%AA%D8%AD%D9%88%D9%84-%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A-%D8%AC%D8%A7%D9%85%D8%B9%D8%A9-%D8%B7%D8%B1%D8%A7%D8%A8%D9%84%D8%B3/?viewAsMember=true" aria-label="social icon">
                       <svg
                         className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
                         width="24"
@@ -258,7 +258,7 @@ const Footer = () => {
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a href="#" aria-label="social icon">
                       <svg
                         className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
@@ -277,7 +277,7 @@ const Footer = () => {
                         </defs>
                       </svg>
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
                 </motion.div>
               </div>
