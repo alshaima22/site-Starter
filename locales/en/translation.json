@@ -143,6 +143,47 @@
             "description": "Staff can access accurate statistics, manage student processes electronically, and generate detailed reports on students, buildings, rooms, and personnel."
           }
         ]
+      },
+      "project2": {
+        "new": "New",
+        "title": "University Student Transportation Platform",
+        "heading": "A Smart Solution for University Bus Management",
+        "description": "We built a digital transportation platform for university students and staff, enabling efficient management of bus lines, schedules, and real-time tracking for both drivers and students.",
+        "features": [
+          {
+            "number": "01",
+            "title": "Bus Line Management",
+            "description": "Administrators can create, edit, and assign bus lines and schedules, optimizing routes for student convenience."
+          },
+          {
+            "number": "02",
+            "title": "Driver and Student Apps",
+            "description": "Drivers receive their assigned routes and schedules, while students can view available lines, track buses in real time, and receive notifications."
+          }
+        ]
+      },
+      "project3": {
+        "new": "New",
+        "title": "University Stores and Purchases Management System",
+        "heading": "Streamlining University Stores and Purchases",
+        "description": "We developed a comprehensive system to manage the university's stores, purchases, and supply needs. The platform simplifies inventory tracking, purchase requests, and approvals, making the process more efficient and transparent for all departments.",
+        "features": [
+          {
+            "number": "01",
+            "title": "Centralized Inventory Management",
+            "description": "All university stores and inventory are managed in one place, allowing for real-time tracking of stock levels and item movements."
+          },
+          {
+            "number": "02",
+            "title": "Automated Purchase Requests",
+            "description": "Departments can submit purchase and supply requests electronically, with automated workflows for approvals and order tracking."
+          },
+          {
+            "number": "03",
+            "title": "Reporting and Analytics",
+            "description": "Generate detailed reports on inventory usage, purchase history, and supply needs to support informed decision-making."
+          }
+        ]
       }
     }
   },
