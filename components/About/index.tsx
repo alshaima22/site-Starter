@@ -110,7 +110,7 @@ const About = () => {
       {/* <!-- ===== About End ===== --> */}
       <section className="overflow-hidden pb-15 lg:pb-20 xl:pb-25">
         <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
-          <div className="mt-10 flex flex-col items-center gap-8 md:flex-row lg:gap-32.5">
+          <div className="mt-10 flex flex-col items-center gap-8 md:flex-row-reverse lg:gap-32.5">
             <motion.div
               variants={{
                 hidden: {
